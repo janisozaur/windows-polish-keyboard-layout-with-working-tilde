@@ -1,0 +1,4 @@
+LIBRARY pl-progr
+ 
+ EXPORTS 
+    KbdLayerDescriptor @1
