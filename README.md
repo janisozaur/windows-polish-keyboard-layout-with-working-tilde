@@ -35,7 +35,9 @@ See repository history for changes to the source files, especially commit e51956
 
 I do not expect anyone to contribute to this repository. Feel free to fork it and make your own changes.
 
-To build, you will need MSKLC 1.4: https://www.microsoft.com/en-us/download/details.aspx?id=102134
+To build, you can use MSKLC 1.4: https://www.microsoft.com/en-us/download/details.aspx?id=102134
+
+Alternatively, you can use the source code in this repository. There is GitHub Actions workflow that builds the DLLs for you.
 
 Source file for the layout is included, but you can easily recreate it by loading the "Polish (programmers)" keyboard, selecting "Shift state", selecting the tilde key, then removing "Dead key?" from the properties.
 
