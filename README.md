@@ -13,6 +13,20 @@ Download the msi installer and dll, run the installer.
 
 After installing, go to Settings -> Time and Language -> Language and region -> <click ellipsis on your desired language> -> Language options -> Add keyboard -> "Polish (programmers) - tilde"
 
+## Additional information
+
+### Code signing
+
+DLLs and installers are signed with my personal certificate, so you can be sure that they are not malicious.
+
+The setup.exe is not, because for some reason signtool complains it is not a correct PE32 file. [PE Bear](https://github.com/hasherezade/pe-bear) disagrees. You are not required to use setup.exe.
+
+### ARM64 support
+
+I don't know about arm64 support, msklc generates ia64, but not arm64 ¯\_(ツ)_/¯.
+
+There is some recent information about it here: https://learn.microsoft.com/en-us/answers/questions/2151451/microsoft-keyboard-layout-creator-(msklc)-for-wind, but I haven't pursued it.
+
 ## Contributing
 
 I do not expect anyone to contribute to this repository. Feel free to fork it and make your own changes.
