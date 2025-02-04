@@ -1,17 +1,17 @@
 /***************************************************************************\
-* Module Name: pl-progr.C
+* Module Name: pl-tilde.C
 *
 * keyboard layout
 *
 * Copyright (c) 1985-2001, Microsoft Corporation
 *
 * History:
-* KBDTOOL v3.40 - Created  Tue Feb 04 11:40:29 2025
+* KBDTOOL v3.40 - Created  Tue Feb 04 11:29:16 2025
 \***************************************************************************/
 
 #include <windows.h>
 #include "kbd.h"
-#include "pl-progr.h"
+#include "pl-tilde.h"
 
 #if defined(_M_IA64)
 #pragma section(".data")
@@ -255,8 +255,7 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS5 aVkToWch5[] = {
   {'L'          ,CAPLOK | CAPLOKALTGR,'l'      ,'L'      ,WCH_NONE ,0x0142   ,0x0141   },
   {VK_OEM_1     ,0      ,';'      ,':'      ,0x001d   ,WCH_NONE ,WCH_NONE },
   {VK_OEM_7     ,0      ,'\''     ,'\"'     ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {VK_OEM_3     ,0      ,'`'      ,WCH_DEAD ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {0xff         ,0      ,WCH_NONE ,'~'      ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_OEM_3     ,0      ,'`'      ,'~'      ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_5     ,0      ,'\\'     ,'|'      ,0x001c   ,WCH_NONE ,WCH_NONE },
   {'Z'          ,CAPLOK | CAPLOKALTGR,'z'      ,'Z'      ,WCH_NONE ,0x017c   ,0x017b   },
   {'X'          ,CAPLOK | CAPLOKALTGR,'x'      ,'X'      ,WCH_NONE ,0x017a   ,0x0179   },
@@ -390,35 +389,6 @@ static ALLOC_SECTION_LDATA VSC_LPWSTR aKeyNamesExt[] = {
     0   ,    NULL
 };
 
-static ALLOC_SECTION_LDATA DEADKEY_LPWSTR aKeyNamesDead[] = {
-    L"~"	L"TILDE",
-    NULL
-};
-
-static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
-    DEADTRANS( L'n'   , L'~'   , 0x0144 , 0x0000),
-    DEADTRANS( L'c'   , L'~'   , 0x0107 , 0x0000),
-    DEADTRANS( L'x'   , L'~'   , 0x017a , 0x0000),
-    DEADTRANS( L'z'   , L'~'   , 0x017c , 0x0000),
-    DEADTRANS( L'a'   , L'~'   , 0x0105 , 0x0000),
-    DEADTRANS( L's'   , L'~'   , 0x015b , 0x0000),
-    DEADTRANS( L'l'   , L'~'   , 0x0142 , 0x0000),
-    DEADTRANS( L'e'   , L'~'   , 0x0119 , 0x0000),
-    DEADTRANS( L'o'   , L'~'   , 0x00f3 , 0x0000),
-    DEADTRANS( L'N'   , L'~'   , 0x0143 , 0x0000),
-    DEADTRANS( L'C'   , L'~'   , 0x0106 , 0x0000),
-    DEADTRANS( L'X'   , L'~'   , 0x0179 , 0x0000),
-    DEADTRANS( L'Z'   , L'~'   , 0x017b , 0x0000),
-    DEADTRANS( L'A'   , L'~'   , 0x0104 , 0x0000),
-    DEADTRANS( L'S'   , L'~'   , 0x015a , 0x0000),
-    DEADTRANS( L'L'   , L'~'   , 0x0141 , 0x0000),
-    DEADTRANS( L'E'   , L'~'   , 0x0118 , 0x0000),
-    DEADTRANS( L'O'   , L'~'   , 0x00d3 , 0x0000),
-    DEADTRANS( L' '   , L'~'   , L'~'   , 0x0000),
-
-    0, 0
-};
-
 static ALLOC_SECTION_LDATA KBDTABLES KbdTables = {
     /*
      * Modifier keys
@@ -433,14 +403,14 @@ static ALLOC_SECTION_LDATA KBDTABLES KbdTables = {
     /*
      * Diacritics
      */
-    aDeadKey,
+    NULL,
 
     /*
      * Names of Keys
      */
     aKeyNames,
     aKeyNamesExt,
-    aKeyNamesDead,
+    NULL,
 
     /*
      * Scan codes to Virtual Keys
