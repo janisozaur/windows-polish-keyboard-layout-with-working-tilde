@@ -23,7 +23,7 @@ The setup.exe is not, because for some reason signtool complains it is not a cor
 
 ### ARM64 support
 
-I don't know about arm64 support, msklc generates ia64, but not arm64 ¯\_(ツ)_/¯.
+I don't know about arm64 support, msklc generates ia64, but not arm64 ¯\\\_(ツ)\_/¯.
 
 There is some recent information about it here: https://learn.microsoft.com/en-us/answers/questions/2151451/microsoft-keyboard-layout-creator-(msklc)-for-wind, but I haven't pursued it.
 
