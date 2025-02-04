@@ -7,7 +7,7 @@ This repository contains a modified version of the Polish (programmers) keyboard
 
 ## Installation
 
-Download the msi installer and dll, run the installer.
+Download the dll for your architecture, place it in `%SystemRoot%\System32` and import `pl-tilde.reg`.
 
 ## Usage
 
@@ -19,13 +19,11 @@ After installing, go to Settings -> Time and Language -> Language and region -> 
 
 DLLs and installers are signed with my personal certificate, so you can be sure that they are not malicious.
 
-The setup.exe is not, because for some reason signtool complains it is not a correct PE32 file. [PE Bear](https://github.com/hasherezade/pe-bear) disagrees. You are not required to use setup.exe.
-
 ### ARM64 support
 
-I don't know about arm64 support, msklc generates ia64, but not arm64 ¯\\\_(ツ)\_/¯.
+msklc generates ia64, but not arm64 ¯\\\_(ツ)\_/¯.
 
-There is some recent information about it here: https://learn.microsoft.com/en-us/answers/questions/2151451/microsoft-keyboard-layout-creator-(msklc)-for-wind, but I haven't pursued it.
+I followed steps outlined in https://learn.microsoft.com/en-us/answers/questions/2151451/microsoft-keyboard-layout-creator-(msklc)-for-wind to create arm64 version (not ARM64EC). Other versions were created with msklc itself.
 
 ## Contributing
 
