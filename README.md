@@ -1,5 +1,5 @@
 # windows-polish-keyboard-layout-with-working-tilde
-This repository contains keyboard layout with modified "Polish (programmers)" to contain working tilde
+[This repository](https://github.com/janisozaur/windows-polish-keyboard-layout-with-working-tilde) contains keyboard layout with modified "Polish (programmers)" to contain working tilde
 
 Microsoft in its infinite wisdom decided to make the tilde key on the Polish keyboard layout useless.
 
