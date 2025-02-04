@@ -9,9 +9,11 @@ This repository contains a modified version of the Polish (programmers) keyboard
 
 Download the dll for your architecture, place it in `%SystemRoot%\System32` and import `pl-tilde.reg`.
 
+See https://learn.microsoft.com/en-us/answers/questions/2151451/microsoft-keyboard-layout-creator-(msklc)-for-wind for more information.
+
 ## Usage
 
-After installing, go to Settings -> Time and Language -> Language and region -> <click ellipsis on your desired language> -> Language options -> Add keyboard -> "Polish (programmers) - tilde"
+After installing, go to Settings -> Time and Language -> Language and region -> &lt;click ellipsis on your desired language&gt; -> Language options -> Add keyboard -> "Polish (programmers) - tilde"
 
 ## Additional information
 
@@ -24,6 +26,10 @@ DLLs and installers are signed with my personal certificate, so you can be sure 
 msklc generates ia64, but not arm64 ¯\\\_(ツ)\_/¯.
 
 I followed steps outlined in https://learn.microsoft.com/en-us/answers/questions/2151451/microsoft-keyboard-layout-creator-(msklc)-for-wind to create arm64 version (not ARM64EC). Other versions were created with msklc itself.
+
+### Changes to the layout
+
+See repository history for changes to the source files, especially commit e519565.
 
 ## Contributing
 
